@@ -1,0 +1,13 @@
+﻿@using BikeShop.Models
+<h1>Усі велосипеди</h1>
+<h3>@Model.currCategory</h3>
+
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Bike bike in Model.allBikes)
+        {
+            @Html.Partial("AllBikes", bike)
+        }
+
+    }
+</div>

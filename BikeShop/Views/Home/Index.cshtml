@@ -1,0 +1,15 @@
+﻿@using BikeShop.Models
+@model BikeShop.ViewModels.HomeViewModel
+
+
+<h1>Найкращі велосипеди</h1>
+
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Bike bike in Model.favBikes)
+        {
+            @Html.Partial("AllBikes", bike)
+        }
+
+    }
+</div>
